@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="crowbar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  
+  <data name="About_ProductDescription" xml:space="preserve">
+    <value>GoldSource and Source Engine Modding Toolset:
+* Decompiler of MDL and related files.
+* Compiler interface to StudioMDL.exe tool.
+* Model viewer interface to Half-Life Model Viewer tool.
+* Unpacker of Fairy Tale Busters APK, Tactical Intervention FPX, Garry's Mod GMA, Vampire: The Masquerade - Bloodlines VPK files, and Source-engine VPK files.
+* Packer interface to Garry's Mod GMA and Source-engine VPK packer tools.
+* Downloader of Workshop items from any Steam game that allows public downloads.
+* Publisher of Workshop items for several Source-engine games.</value>
+  </data>
+  <data name="Decompile_DebugAniFileNameSuffix" xml:space="preserve">
+    <value>decompile-ANI.txt</value>
+  </data>
+  <data name="Decompile_DebugMdlFileNameSuffix" xml:space="preserve">
+    <value>decompile-MDL.txt</value>
+  </data>
+  <data name="Decompile_DebugPhyFileNameSuffix" xml:space="preserve">
+    <value>decompile-PHY.txt</value>
+  </data>
+  <data name="Decompile_DebugSequenceGroupMDLFileNameSuffix" xml:space="preserve">
+    <value>decompile-SequenceGroupMDL.txt</value>
+  </data>
+  <data name="Decompile_DebugTextureMDLFileNameSuffix" xml:space="preserve">
+    <value>decompile-TextureMDL.txt</value>
+  </data>
+  <data name="Decompile_DebugVtxFileNameSuffix" xml:space="preserve">
+    <value>decompile-VTX.txt</value>
+  </data>
+  <data name="Decompile_DebugVvdFileNameSuffix" xml:space="preserve">
+    <value>decompile-VVD.txt</value>
+  </data>
+  <data name="Decompile_LogFileNameSuffix" xml:space="preserve">
+    <value>decompile-log.txt</value>
+  </data>
+  <data name="About_AuthorLink" xml:space="preserve">
+    <value>http://steamcommunity.com/id/zeqmacaw</value>
+  </data>
+  <data name="About_ProductLink" xml:space="preserve">
+    <value>http://steamcommunity.com/groups/CrowbarTool</value>
+  </data>
+  <data name="ErrorMessageSDKMissingCause" xml:space="preserve">
+    <value>Possible causes: The game's SDK or Authoring Tools has not been installed (usually via Steam Library Tools) or the path given to Crowbar (via Set Up Games button) is incorrect.</value>
+  </data>
+
+  
+  <data name="Unpack_LogFileNameSuffix" xml:space="preserve">
+    <value>unpack-log.txt</value>
+  </data>
+  
+ 
+  
+  <data name="About_GotoSteamGroupText" xml:space="preserve">
+    <value>Goto Steam Group</value>
+  </data>
+
+  
+  <data name="Help_CrowbarGuideLink" xml:space="preserve">
+    <value>http://steamcommunity.com/sharedfiles/filedetails/?id=791755353</value>
+  </data>
+  <data name="BugReportLink" xml:space="preserve">
+    <value>https://steamcommunity.com/groups/CrowbarTool/discussions/1/</value>
+  </data>
+
+  <data name="BugReportLink1" xml:space="preserve">
+    <value>https://steamcommunity.com/groups/CrowbarTool/discussions/1/</value>
+  </data>
+ 
+  <data name="Link_SteamSubscriberAgreement" xml:space="preserve">
+    <value>https://steamcommunity.com/sharedfiles/workshoplegalagreement</value>
+  </data>
+
+  <data name="Crowbar_Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crowbar Settings.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  
+  <data name="About_PayPalLink" xml:space="preserve">
+    <value>http://paypal.me/zeqmacaw</value>
+  </data>
+
+</root>

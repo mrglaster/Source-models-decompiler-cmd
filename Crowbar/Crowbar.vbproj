@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{632B4ABC-9AF3-480D-8640-FDA6FB637AD7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>Crowbar</RootNamespace>
+    <AssemblyName>CrowbarDecompiler</AssemblyName>
+    <MyType>Console</MyType>
+    <OptionStrict>On</OptionStrict>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>false</DebugSymbols>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineDebug>false</DefineDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Steamworks.NET, Version=12.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Steamworks.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\- Application\App.vb" />
+    <Compile Include="Core\- Application\AppConstants.vb" />
+    <Compile Include="Core\- Application\AppEnums.vb" />
+    <Compile Include="Core\- Application\AppExceptionHandler.vb" />
+    <Compile Include="Core\- Application\SingleInstanceApplication.vb" />
+    <Compile Include="Core\- Application\SingleInstanceEventArgs.vb" />
+    <Compile Include="Core\- Application\VersionModule.vb" />
+    <Compile Include="Core\- General\BackgroundWorkerEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\- General\Bitmap\BitmapFile.vb" />
+    <Compile Include="Core\- General\Bitmap\BitmapFileHeader.vb" />
+    <Compile Include="Core\- General\Bitmap\BitmapInfoHeader.vb" />
+    <Compile Include="Core\- General\Bitmap\BitmapRgbQuad.vb" />
+    <Compile Include="Core\- General\Workarounds.vb" />
+    <Compile Include="Core\- General\XmlColor.vb" />
+    <Compile Include="Core\- General\DuplicateKeyComparer.vb" />
+    <Compile Include="Core\- General\EnumHelper.vb" />
+    <Compile Include="Core\- General\GenericsModule.vb" />
+    <Compile Include="Core\- General\StringClass.vb" />
+    <Compile Include="Core\- Application\AppSettings.vb" />
+    <Compile Include="Core\- General\BindingListEx.vb" />
+    <Compile Include="Core\- General\BindingListExAutoSort.vb" />
+    <Compile Include="Core\- General\FileManager.vb" />
+    <Compile Include="Core\- General\IntermediateExpression.vb" />
+    <Compile Include="Core\- General\MathModule.vb" />
+    <Compile Include="Core\- General\PropertyComparer.vb" />
+    <Compile Include="Core\- General\Win32Api.vb" />
+    <Compile Include="Core\- General\WindowsJob.vb" />
+    <Compile Include="Core\AccessedBytesDebugFile.vb" />
+    <Compile Include="Core\Decompiler\DecompilerOutputInfo.vb" />
+    <Compile Include="Core\Decompiler\DecompilerInputInfo.vb" />
+    <Compile Include="Core\Decompiler\Decompiler.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Decompiler\FileSeekLog.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFile14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlBodyPart14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlFileData14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlMesh14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlModel14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlTexture14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlWeightingBoneData14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlWeightingHeader14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceMdlFileData\SourceMdlWeighting14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceModel14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceQcFile14.vb" />
+    <Compile Include="Core\GameModel\SourceModel14\SourceSmdFile14.vb" />
+    <Compile Include="Core\GameModel\- Base\Common.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceMdlAnimationDescBase.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceMdlFileDataBase.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceMdlSequenceDescBase.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceModelProgressEventArgs.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceModelProgressEventHandler.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceFileNamesModule.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAimAtBone.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlBoneTransform.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlLinearBone.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlCompressedIkError.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceFileData.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceFloat8bits.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion48bitsAssumedW.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion48bitsViaBytes.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion48bitsSmallest3.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceVector4D.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlBodyPart04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlFaceVertexInfo04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlFace04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlMesh04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlModel04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlNormal04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlSequence04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlSequenceDesc04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlBone04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlFileData04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFile04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlSequenceValue04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceMdlFileData\SourceMdlVertex04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceModel04.vb" />
+    <Compile Include="Core\GameModel\SourceModel04\SourceSmdFile04.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceBonePostionAndRotation06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceBoneTransform06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlAnimation06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlBodyPart06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlFileData06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlBone06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlBoneController06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlBonePosition06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlBoneRotation06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlEvent06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlMesh06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlModel06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlModelData06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlPivot06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlSequenceDesc06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlTexture06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFileData\SourceMdlTriangleVertex06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceMdlFile06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceModule06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceQcFile06.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceSmdFile06.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceBoneTransform10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMeshTriangleStripOrFan10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceModule10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlAnimation10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlAnimationValue10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlAttachment10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlBodyPart10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlBone10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlBoneController10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlEvent10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlHitbox10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlMesh10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlModel10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlPivot10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlSequenceDesc10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlSequenceGroup10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlSequenceGroupFileHeader10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlTexture10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlVertexInfo10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFile10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceMdlFileData\SourceMdlFileData10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceQcFile10.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceSmdFile10.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\FlexFrame2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlFileData2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel06\SourceModel06.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlAnimation2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlAnimationDesc2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlAnimationValue2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlAttachment2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlAxisInterpBone2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlBodyPart2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlBone2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlBoneController2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlEyeball2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlFlex2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlHitbox2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlHitboxSet2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlIncludeModel2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlMesh2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlModel2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlPoseParamDesc2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlQuatInterpBone2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlSequenceDesc2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlSequenceGroup2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlTangent2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlTexture2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlQuatInterpInfo2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlType1Vertex2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlType2Vertex2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlType0Vertex2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFileData\SourceMdlVertAnim2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceModule2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceQcFile2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceVtaFile2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFile31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlAnimation31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlAnimationDesc31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlAnimGroup31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlBodyPart31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlBone31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlBoneWeight31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlFileData31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlHitbox31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlHitboxSet31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlMesh31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlModel31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlSequenceDesc31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlSequenceGroup31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlTexture31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceMdlFileData\SourceMdlVertex31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceModel31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceQcFile31.vb" />
+    <Compile Include="Core\GameModel\SourceModel31\SourceSmdFile31.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFile32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlAnimationDesc32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlBoneController32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlFileData32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlHitbox32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlHitboxSet32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceMdlFileData\SourceMdlSequenceDesc32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceModel32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceQcFile32.vb" />
+    <Compile Include="Core\GameModel\SourceModel32\SourceSmdFile32.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceMdlFile36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceMdlFileData\SourceMdlAnimationDesc36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceMdlFileData\SourceMdlFileData36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceMdlFileData\SourceMdlSequenceDesc36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceModel36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceQcFile36.vb" />
+    <Compile Include="Core\GameModel\SourceModel36\SourceSmdFile36.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\FlexFrame37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceVrdFile37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceVtaFile37.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceAniFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceAniFileData\SourceAniFrameAnim52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceMdlFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceMdlFileData\SourceMdlAnimationDesc52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceMdlFileData\SourceMdlFileData52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceModel52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceQcFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceSmdFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceVrdFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel52\SourceVtaFile52.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceMdlFile53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceMdlFileData\SourceMdlFileData53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceModel53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceQcFile53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceSmdFile53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceVrdFile53.vb" />
+    <Compile Include="Core\GameModel\SourceModel53\SourceVtaFile53.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxMaterialReplacement06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxMaterialReplacementList06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxMaterialReplacement07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxMaterialReplacementList07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxFileData107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxBodyPart107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxBoneStateChange107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxMesh107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxModel107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxModelLod107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxStrip107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxStripGroup107.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxVertex107.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceMdlFile2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceSmdFile2531.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile107\SourceVtxFile107.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFile37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlAnimation37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlAnimationDesc37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlAnimGroup37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlAttachment37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlAutoLayer37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlBodyPart37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlBone37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlBoneController37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlBoneDesc37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlBoneWeight37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlEvent37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlEyeball37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlFileData37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlFlex37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlHitbox37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlHitboxSet37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlIkChain37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlIkError37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlIkLink37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlIkLock37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlIkRule37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlMesh37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlModel37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlSequenceDesc37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlSequenceGroup37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlTexture37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlVertAnim37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceMdlFileData\SourceMdlVertex37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceModel37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceQcFile37.vb" />
+    <Compile Include="Core\GameModel\SourceModel37\SourceSmdFile37.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxFile06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxBodyPart06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxBoneStateChange06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxFileData06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxMesh06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxModel06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxModelLod06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxStrip06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxStripGroup06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile06\SourceVtxVertex06.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VvdFile\VvdFile04\SourceVvdFile04.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlLocalHierarchy.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlWeightList.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceModel.vb" />
+    <Compile Include="Core\GameModel\SourceModel10\SourceModel10.vb" />
+    <Compile Include="Core\GameModel\SourceModel2531\SourceModel2531.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceMdlFileData\SourceMdlAnimationDesc49.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceMdlFileData\SourceMdlFileData49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxFileData07.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceModel49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\AniFile\AniFile49\SourceAniFile49.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceMdlFile49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyFile.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceQcFile49.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceSmdFile49.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceVrdFile49.vb" />
+    <Compile Include="Core\GameModel\SourceModel49\SourceVtaFile49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxFile07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\AniFile\AniFile49\BoneConstantInfo49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\AniFile\AniFile49\BoneFrameDataInfo49.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\AniFile\AniFile49\SourceAniFrameAnim49.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceConstants.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceFloat16bits.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion48bits.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceQuaternion64bits.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceVector48bits.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\AnimationFrameLine.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlActivityModifier.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\LodQcInfo.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimBlock.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\FlexFrame.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAutoLayer.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAxisInterpBone.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlBoneController.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlEvent.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlEyeball.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlex.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlIkLock.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlexOp.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimation.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimationSection.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimationValue.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimationValuePointer.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlexControllerUi.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlHitbox.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlHitboxSet.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlIkRule.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlJiggleBone.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlMovement.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlQuatInterpBone.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlQuatInterpBoneInfo.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlVertAnim.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlVertAnimWrinkle.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyFaceSection.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyFace.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyVertex.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VvdFile\VvdFile04\SourceVvdFileData04.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxBoneStateChange07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxBodyPart07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxModel07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxModelLod07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxMesh07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxStripGroup07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxStrip07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VtxFile\VtxFile07\SourceVtxVertex07.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\VvdFile\VvdFile04\SourceVvdFixup04.vb" />
+    <Compile Include="Core\UnknownValue.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\- Application\NodeSorter.vb" />
+    <Compile Include="Widgets\- General\CheckBoxEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\DateTimeTextBoxEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\FileDragDropHelper.vb" />
+    <Compile Include="Widgets\- General\GroupBoxEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\TreeViewEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\ProgressBarEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\RichTextBoxEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- Application\MacroDataGridView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\SplitContainerEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\TextBoxEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\- General\ToolStripSpringTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\- Application\Main.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Core\GameModel\- Base\SourceMdlFile.vb" />
+    <Compile Include="Core\GameModel\- Base\SourceQcFile.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyCollisionPair.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyEditParamsSection.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyRagdollConstraint.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyCollisionData.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhyFileData.vb" />
+    <Compile Include="Core\GameModel\CompiledFiles\PhyFile\SourcePhysCollisionModel.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlSkinFamily.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceVector.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAnimationDesc.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlAttachment.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlBone.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceBoneWeight.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlexController.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlexDesc.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFlexRule.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlFileData.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlBodyPart.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlIkChain.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlIkLink.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlMesh.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlMeshVertexData.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlModel.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlModelGroup.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlModelVertexData.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlMouth.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlPoseParamDesc.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlSequenceDesc.vb" />
+    <Compile Include="Core\GameModel\SourceCommon\SourceMdlFileData\SourceMdlTexture.vb" />
+    <Compile Include="Core\GameModel\SourceGlobal\SourceVertex.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Widgets\- Application\MacroDataGridView.resx">
+      <DependentUpon>MacroDataGridView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\- General\TreeViewEx.resx">
+      <DependentUpon>TreeViewEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crowbar Settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\GameModel\UncompiledFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
