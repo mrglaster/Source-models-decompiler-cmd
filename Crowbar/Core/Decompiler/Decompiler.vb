@@ -30,6 +30,7 @@ Public Class Decompiler
 		AddHandler Me.DoWork, AddressOf Me.Decompiler_DoWork
 		Me.Decompile()
 		Console.WriteLine("Decompilation of model " + mdlPa + " is done!")
+		Application.Exit()
 	End Sub
 
 #End Region
