@@ -7,6 +7,13 @@ Command-line utility automaticly decompiling models of Source engine.
 ```
 CrowbarDecompiler.exe Path\To\Model.mdl Path\To\OutputFolder\
 ```
+or
+
+```
+CrowbarDecompiler.exe Path\To\Model.mdl
+```
+or use drag-and-drop system
+
 
 ## Credits
 
