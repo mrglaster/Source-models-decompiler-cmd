@@ -52,11 +52,27 @@ Public Class App
 		Dim clArgs() As String = Environment.GetCommandLineArgs()
 		Dim path_to_model As String = String.Empty
 		Dim output_path As String = String.Empty
-		If clArgs.Length() = 1 Or clArgs.Length() < 3 Then
+		If clArgs.Length() = 1 Then
 			Console.WriteLine("Argument amount error!")
 			Console.WriteLine("Usage: ""Path\To\Model.mdl"" ""Path\To\Output\Folder""")
 			Application.Exit()
 		End If
+
+		If clArgs.Length() < 0 Then
+			Console.WriteLine("Input args error!")
+		End If
+
+
+		If clArgs.Length() = 2 Then
+			path_to_model = clArgs(1)
+			If path_to_model.EndsWith(".mdl") And My.Computer.FileSystem.FileExists(path_to_model) Then
+				output_path = path_to_model.Substring(0, path_to_model.LastIndexOf("\"))
+				Me.theDecompiler = New Decompiler(path_to_model, output_path)
+			End If
+
+		End If
+
+
 
 		If clArgs.Length() >= 3 Then
 			path_to_model = clArgs(1)
@@ -73,7 +89,7 @@ Public Class App
 					Me.theDecompiler = New Decompiler(path_to_model, output_path)
 				Else
 					Console.WriteLine("Usage: ""Path\To\Model.mdl"" ""Path\To\Output\Folder""")
-
+					Console.WriteLine("Second using way (you'll find result in the model folder) ""Path\To\Model.mdl"" or just use drag-and-drop")
 				End If
 			End If
 		End If
