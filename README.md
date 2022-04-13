@@ -17,7 +17,7 @@ or use drag-and-drop system
 
 ## Credits
 
-Credit to ZeqMacaw (https://steamcommunity.com/id/zeqmacaw) for creating Crowbar and developing/providing the source code that this project is based off of.
+Credit to ZeqMacaw (https://steamcommunity.com/id/zeqmacaw) for creating Crowbar and developing/providing the source code that this project is based on.
 Crowbar Steam group: https://steamcommunity.com/groups/CrowbarTool
 
 ## Links
