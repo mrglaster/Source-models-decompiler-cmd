@@ -1,4 +1,4 @@
-# CrowbarDecompilerCMD
+# Crowbar based Source engine models decompiler
 Command-line utility automaticly decompiling models of Source engine. 
 
 
