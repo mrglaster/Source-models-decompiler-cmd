@@ -22,5 +22,5 @@ Crowbar Steam group: https://steamcommunity.com/groups/CrowbarTool
 
 ## Links
 
-https://github.com/ZeqMacaw/Crowbar - Crowbar Github repository
+https://steamcommunity.com/groups/CrowbarTool - Crowbar
 
